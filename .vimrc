@@ -31,10 +31,18 @@ autocmd BufRead,BufNewFile * syn match _yyy /\c^.*YYY.*$/
 set cursorline
 
 "Tab options
+function! SetSpaces(num)
+    let &l:tabstop=a:num
+    let &l:shiftwidth=a:num
+    let &l:softtabstop=a:num
+endfunction
+
+command! Rosc call SetSpaces(2)
+
 set tabstop=4
 set shiftwidth=4
-set expandtab
 set softtabstop=4
+set expandtab
 set smarttab
 
 "Misc options
