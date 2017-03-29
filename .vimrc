@@ -22,11 +22,11 @@ highlight _yyy ctermbg=Green guibg=#00ff00 guifg=#000000
 highlight _operators term=bold ctermfg=16 guifg=#000000
 highlight cursorline ctermbg=123 guibg=#afffff
 highlight Folded guibg=grey guifg=blue
-autocmd BufRead,BufNewFile * syn match _Spaces /^ \+\| \+$/
-autocmd BufRead,BufNewFile * syn match _Tabs /\t/
-autocmd BufRead,BufNewFile * syn match _to_do /\c^.*TODO.*$/
-autocmd BufRead,BufNewFile * syn match _xxx /\c^.*XXX.*$/
-autocmd BufRead,BufNewFile * syn match _yyy /\c^.*YYY.*$/
+autocmd BufWinEnter * syn match _Spaces /^ \+\| \+$/
+autocmd BufWinEnter * syn match _Tabs /\t/
+autocmd BufWinEnter * syn match _to_do /\c^.*TODO.*$/
+autocmd BufWinEnter * syn match _xxx /\c^.*XXX.*$/
+autocmd BufWinEnter * syn match _yyy /\c^.*YYY.*$/
 "autocmd Syntax * call matchadd('_operators','\+|\\|\=')
 set cursorline
 
