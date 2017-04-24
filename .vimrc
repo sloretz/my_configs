@@ -109,3 +109,7 @@ function! DoPrettyXML()
   exe "set ft=" . l:origft
 endfunction
 command! PrettyXML call DoPrettyXML()
+
+if exists("*pathogen#infect")
+  execute pathogen#infect()
+endif
