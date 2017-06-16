@@ -110,6 +110,4 @@ function! DoPrettyXML()
 endfunction
 command! PrettyXML call DoPrettyXML()
 
-if exists("*pathogen#infect")
-  execute pathogen#infect()
-endif
+silent! call pathogen#infect()
