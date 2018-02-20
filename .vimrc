@@ -29,6 +29,7 @@ autocmd BufWinEnter * syn match _xxx /\c^.*XXX.*$/
 autocmd BufWinEnter * syn match _yyy /\c^.*YYY.*$/
 "autocmd Syntax * call matchadd('_operators','\+|\\|\=')
 set cursorline
+set colorcolumn=80,100
 
 "Tab options
 function! SetSpaces(num)
@@ -39,9 +40,9 @@ endfunction
 
 command! Rosc call SetSpaces(2)
 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set smarttab
 
@@ -55,7 +56,8 @@ set timeoutlen=4000
 
 "Gui options
 set showtabline=2
-set guitablabel=%m\ %t
+" Show modified a space, and filename limited to 15 chars
+set guitablabel=%N%m\ %.15t
 set number
 
 "Searching settings
