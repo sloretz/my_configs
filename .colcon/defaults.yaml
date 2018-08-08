@@ -1,0 +1,11 @@
+{                                                                                                                      
+  "build": {
+    "cmake-args": [
+      "-DCMAKE_BUILD_TYPE=Debug",
+      "-DCMAKE_C_COMPILER=/usr/lib/ccache/gcc",
+      "-DCMAKE_CXX_COMPILER=/usr/lib/ccache/g++"]
+  },
+  "test": {
+    "event-handlers": ["console_direct+"]
+  }
+}
