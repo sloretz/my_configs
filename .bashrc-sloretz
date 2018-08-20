@@ -1,0 +1,3 @@
+# Need .bashrc to source ~/.bashrc-sloretz
+
+export PS1="\e[93m\u\e[39m(\e[1m\A\e[0m):\e[1m\W\e[0m\$ "
