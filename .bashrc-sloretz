@@ -1,3 +1,13 @@
 # Need .bashrc to source ~/.bashrc-sloretz
 
-export PS1="\e[93m\u\e[39m(\e[1m\A\e[0m):\e[1m\W\e[0m\$ "
+YELLOW="\[\e[93m\]"
+DEFAULT_FG="\[\e[39m\]"
+BOLD="\[\e[1m\]"
+CLEAR="\[\e[0m\]"
+
+export PS1="$CLEAR$YELLOW\u$DEFAULT_FG($BOLD\A$CLEAR):$BOLD\W$CLEAR\$ "
+
+unset YELLOW
+unset DEFAULT_FG
+unset BOLD
+unset CLEAR
