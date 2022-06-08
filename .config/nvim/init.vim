@@ -29,7 +29,6 @@ set cursorline
 " Color columns at 80 and 100 chars so I know when I've written too much
 set colorcolumn=80,100
 
-
 " Tabs spaces and stuff
 set tabstop=2
 set shiftwidth=2
@@ -101,3 +100,18 @@ augroup END
 function! Handle_Win_Enter()
   setlocal winhighlight=Normal:ActiveWindow,NormalNC:InactiveWindow
 endfunction
+
+" Don't show line numbers in :term windows
+autocmd TermOpen * setlocal nonumber norelativenumber
+
+" Kepp current directory and browsing directory sync'd
+let g:netrw_keepdir = 0
+" 32 columns wide
+let g:netrw_winsize = -32
+" Suppress the banner
+let g:netrw_banner = 0
+" Use the previous window to open a file
+let g:netrw_browse_split = 4
+
+" Enable mouse support
+set mouse=a
